@@ -1,20 +1,14 @@
 # What kind of trading funds the UNI burn, and is it durable?
 
-*Code, data and charts: https://github.com/0xCadeZ/uni-burn-flow. Everything below regenerates from public endpoints in about 30 minutes; no paid data, no API keys.*
+*0xCadeZ, November 2026. All numbers are from public RPC endpoints (Robinhood Chain, Ethereum) and the DefiLlama fees API; code, derived data and charts are open at https://github.com/0xCadeZ/uni-burn-flow and regenerate in about 30 minutes with no API keys. Disclosure: I hold no UNI and no position on Robinhood Chain; this is posted for criticism.*
 
-**Question.** Uniswap's fee switch burns UNI with protocol fees. Since August, the largest single source of those fees has been Robinhood Chain. What kind of trading produced that revenue, who paid it, and how much of it should be expected to persist?
+## tl;dr
+
+Uniswap's fee switch burned about $8M of UNI a month this autumn, and from August the largest single source was Robinhood Chain. I sampled 1.19M Uniswap v3 swaps there and classified every transaction. The burn was funded 64% by memecoin pools at the 1% fee tier, 23% by tokenized stocks, 12% by WETH/USDG despite its 72% of volume. Atomic arbitrage paid 30% of it, almost the same as the 26% on Ethereum mainnet with the same classifier, so the bot share is a property of Uniswap v3, not of the chain. September's record and October's 45% drop are the memecoin line; extrapolating the September burn rate extrapolates a memecoin cycle on one chain.
+
+**Question.** What kind of trading produced Robinhood Chain's Uniswap protocol revenue, who paid it, and how much of it should be expected to persist?
 
 **Data.** Monthly revenue by chain from DefiLlama (reconciles to tokenbuybacks.app's reported burn within 0.3%). On Robinhood Chain, every Uniswap v3 Swap event in 84 ten-minute windows across 14 days from Aug 5 to Oct 28, 1,185,619 swaps in 449,704 pools, pulled from the public RPC. Each transaction is classified by structure (round trip, multi-hop, private bot, shared router) and each pool by what it trades (tokenized stock per Robinhood's own asset registry, crypto major, or other). The sampled protocol fees scale to $15.0M for August to October against DefiLlama's $14.7M for Robinhood v3, a 2% gap. The same classifier was run on Ethereum mainnet for two of the days as a baseline.
-
-**Findings, in brief.**
-
-- Robinhood Chain's share of Uniswap protocol revenue went from 0 in June to 56% in September and 21% in October. Total protocol revenue fell 45% from September to October.
-- On Robinhood Chain, 64% of protocol fees came from pools in the "other" category, almost all memecoin/WETH pairs at the 1% tier; 23% from tokenized stocks; 12% from WETH/USDG, which carried 72% of volume at the 0.01% tier.
-- Round-trip transactions (atomic arbitrage) paid 30% of burn funding on Robinhood Chain and 26% on Ethereum mainnet. The class mix is nearly identical across the two chains; the asset mix is not.
-- Within tokenized-stock pools, round trips were 40% of protocol fees.
-- The September spike and the October decline are mostly the memecoin line. Tokenized stocks and crypto majors were a smaller and steadier base.
-
-The rest of this post gives the method in enough detail to reproduce, then the three findings, then the limitations, which are material.
 
 ## 1. Where the burn money comes from
 
@@ -41,13 +35,13 @@ Everything comes from public endpoints, no accounts, no paid data.
 - **Category per pool**: tokenized stock if either token is in Robinhood's own asset registry (203 tokens, api.robinhood.com/rhj/assets); crypto if both tokens are majors (WETH, USDG, stables); everything else memecoin.
 - **Scale check**: sampled protocol fees scale to $15.0M for Aug-Oct against DefiLlama's $14.7M for Robinhood v3 (+2%).
 
-## 3. Finding 1: what trades is not what pays
+## 3. What trades is not what pays
 
 ![Share of volume vs share of protocol fee by category on Robinhood Chain](https://raw.githubusercontent.com/0xCadeZ/uni-burn-flow/main/charts/2_volume_vs_fee.png)
 
 WETH/USDG is 72% of sampled volume and 12% of protocol fees. Memecoin pools, mostly X/WETH at the 1% tier, are 13% of volume and 64% of fees. Tokenized stocks, the chain's stated purpose, are 14% of volume and 23% of fees. The fee tier does the work: a dollar of memecoin volume pays 100 times what a dollar of WETH/USDG volume pays.
 
-## 4. Finding 2: who pays, and the mainnet comparison
+## 4. The arbitrage share is Uniswap's, not Robinhood's
 
 ![Transaction class share of protocol fee, Robinhood Chain vs Ethereum mainnet](https://raw.githubusercontent.com/0xCadeZ/uni-burn-flow/main/charts/4_class_mix.png)
 
@@ -62,7 +56,7 @@ The class mix is nearly the same on both chains. Atomic arbitrage is a quarter t
 
 Inside tokenized stocks the picture is different: 137k of 256k stock swaps were round trips, and they paid 40% of stock-pool protocol fees. A stock that trades on-chain at 3am against a closed Nasdaq is a natural arbitrage target, and the bots are there.
 
-## 5. Finding 3: the spike and the fade
+## 5. The spike was a memecoin cycle
 
 ![Sampled protocol fee per day on Robinhood Chain, stacked by category](https://raw.githubusercontent.com/0xCadeZ/uni-burn-flow/main/charts/3_fee_by_day.png)
 
@@ -74,6 +68,21 @@ Per sampled day, memecoin fees were 24% of the three-month total in August, 36% 
 2. **Protocol fee design.** The protocol fee discount auctions target "sophisticated flow." In this sample, atomic arbitrage is 30% of burn funding on Robinhood Chain and 40% within tokenized-stock pools. That is the order of magnitude a discount policy would be acting on.
 3. **A new arbitrage setting.** Tokenized equities trading 24/7 on-chain against an off-chain market that is closed two-thirds of the time is, as far as I can find, unmeasured. The round-trip share here is a first number. The non-atomic component (app-to-DEX and CEX-to-DEX arbitrage, which lands in my router class) is the obvious next study, and the one I would propose to do properly: tx-level attribution with sender clustering, full-period coverage rather than sampling, and the off-market-hours split.
 
+## Numbers at a glance
+
+| Measurement | Value |
+|---|---|
+| Uniswap protocol revenue, Sep 2026 / Oct 2026 | $15.5M / $8.5M (-45%) |
+| Robinhood Chain share of protocol revenue, Sep / Oct | 56% / 21% |
+| Robinhood Chain v3 revenue, Aug-Oct, DefiLlama vs this sample scaled | $14.7M vs $15.0M (+2%) |
+| Swaps sampled on Robinhood Chain (84 windows, 14 days) | 1,185,619 in 449,704 pools |
+| Protocol fee share: memecoin / tokenized stock / crypto majors | 64% / 23% / 12% |
+| Volume share of the same three | 13% / 14% / 72% |
+| Protocol fee share: round trip / multi-hop / private bot / shared router | 30% / 9% / 4% / 58% |
+| Same four classes on Ethereum mainnet (2 days) | 26% / 13% / 0% / 61% |
+| Round-trip share of protocol fee inside tokenized-stock pools | 40% |
+| Memecoin share of sampled fees by month, Aug / Sep / Oct | 24% / 36% / 4% (of the 3-month total) |
+
 ## Limitations
 
 - 14 of 92 days, one hour per day. Weekday and intraday coverage is partial; the scale check passes but day-level numbers are noisy.
@@ -83,14 +92,16 @@ Per sampled day, memecoin fees were 24% of the three-month total in August, 36% 
 - The mainnet baseline is two days and reads ~45% below DefiLlama's 90-day daily average for Ethereum v3; both sampled days were calm. Shares, not levels, are the comparison.
 - Protocol take is assumed from the governance schedule, not read per pool.
 
-## Prior work
+## References
 
-- Non-Atomic Arbitrage in Decentralized Finance (arbitrage ~40% of Uniswap v3 volume, pre-2024).
-- Measuring CEX-DEX Extracted Value and Searcher Profitability, arXiv 2507.13023.
-- Cross-Rollup MEV: Non-Atomic Arbitrage on Layer-2 Blockchains, CAAW 2026.
-- Uniswap governance: UNIfication, Proposal 100, Robinhood Chain fee expansion.
-- Who actually captures MEV on Base after Flashblocks (this forum, Nov 2026).
+[1] Non-Atomic Arbitrage in Decentralized Finance. Heimbach, Pahari, Schertenleib (2024). Arbitrage ~40% of Uniswap v3 volume, mostly non-atomic.
+[2] Measuring CEX-DEX Extracted Value and Searcher Profitability: The Darkest of the MEV Dark Forest. arXiv 2507.13023 (AFT 2025).
+[3] Cross-Rollup MEV: Non-Atomic Arbitrage on Layer-2 Blockchains. Gorzny et al., CAAW 2026.
+[4] To Wait or To Probe: Arbitrage Competition on High-Throughput Blockchains. Wu, Öz (this forum, June 2026).
+[5] Who actually captures MEV on Base after Flashblocks: one week of measurements. Luzin (this forum, November 2026).
+[6] Uniswap governance: UNIfication; Proposal 100 (v4 protocol fees, July 2026); Protocol Fee Expansion: Robinhood Chain (July 2026).
+[7] Uniswap developer docs, Fees: v3 protocol fee schedule by tier.
 
-## Reproduce
+## Reproduce, and data offer
 
-Repo: https://github.com/0xCadeZ/uni-burn-flow. `scripts/01_fee_series.py` (DefiLlama), `scripts/02_sample_swaps.py` (RPC sampler), `scripts/03_classify.py`, `scripts/04_mainnet_baseline.py`, `scripts/05_charts.py`. Raw samples are ~400 MB and regenerate in about 30 minutes from the public RPC.
+Repo: https://github.com/0xCadeZ/uni-burn-flow. `scripts/01_fee_series.py` (DefiLlama), `scripts/02_sample_swaps.py` (RPC sampler), `scripts/03_classify.py`, `scripts/04_mainnet_baseline.py`, `scripts/05_charts.py`. The per-window, per-pair, per-class aggregate that every number above derives from is in the repo (`data/robinhood_window_pair_class.csv`). The raw sample, 1.19M swaps with tx hash, pool, sender, recipient, amounts and sqrtPrice (~400 MB), regenerates in 30 minutes or I can share it directly. Questions, corrections and requests for other cuts are welcome; I would rather be corrected here than cited wrongly elsewhere.
