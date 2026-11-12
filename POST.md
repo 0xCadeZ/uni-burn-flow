@@ -1,6 +1,6 @@
 # What kind of trading funds the UNI burn, and is it durable?
 
-*Research post. ~1,500 words, 4 charts. Code and data: https://github.com/0xCadeZ/uni-burn-flow. Everything below regenerates from public endpoints in about 30 minutes; no paid data.*
+*Code, data and charts: https://github.com/0xCadeZ/uni-burn-flow. Everything below regenerates from public endpoints in about 30 minutes; no paid data, no API keys.*
 
 **Question.** Uniswap's fee switch burns UNI with protocol fees. Since August, the largest single source of those fees has been Robinhood Chain. What kind of trading produced that revenue, who paid it, and how much of it should be expected to persist?
 
@@ -18,7 +18,7 @@ The rest of this post gives the method in enough detail to reproduce, then the t
 
 ## 1. Where the burn money comes from
 
-[Chart 1: monthly protocol revenue, Robinhood vs other chains]
+![Uniswap protocol revenue by month, Robinhood Chain vs other chains](https://raw.githubusercontent.com/0xCadeZ/uni-burn-flow/main/charts/1_monthly_revenue.png)
 
 Uniswap governance activated protocol fees on v2/v3 pools in late 2025 and extended them to Robinhood Chain in July 2026 (Proposal 100 and the Robinhood expansion vote). Fees flow into TokenJar contracts that burn UNI. DefiLlama's chain breakdown gives the monthly picture: Robinhood Chain went from zero to 56% of all Uniswap protocol revenue in September, then to 21% in October. Total protocol revenue fell from $15.5M in September to $8.5M in October; the November run-rate is around $6.6M.
 
@@ -43,13 +43,13 @@ Everything comes from public endpoints, no accounts, no paid data.
 
 ## 3. Finding 1: what trades is not what pays
 
-[Chart 2: volume share vs protocol fee share by category]
+![Share of volume vs share of protocol fee by category on Robinhood Chain](https://raw.githubusercontent.com/0xCadeZ/uni-burn-flow/main/charts/2_volume_vs_fee.png)
 
 WETH/USDG is 72% of sampled volume and 12% of protocol fees. Memecoin pools, mostly X/WETH at the 1% tier, are 13% of volume and 64% of fees. Tokenized stocks, the chain's stated purpose, are 14% of volume and 23% of fees. The fee tier does the work: a dollar of memecoin volume pays 100 times what a dollar of WETH/USDG volume pays.
 
 ## 4. Finding 2: who pays, and the mainnet comparison
 
-[Chart 4: transaction class share, Robinhood vs mainnet]
+![Transaction class share of protocol fee, Robinhood Chain vs Ethereum mainnet](https://raw.githubusercontent.com/0xCadeZ/uni-burn-flow/main/charts/4_class_mix.png)
 
 | Class | Robinhood Chain | Ethereum mainnet (2 days) |
 |---|---|---|
@@ -64,7 +64,7 @@ Inside tokenized stocks the picture is different: 137k of 256k stock swaps were 
 
 ## 5. Finding 3: the spike and the fade
 
-[Chart 3: sampled protocol fee per day, stacked by category]
+![Sampled protocol fee per day on Robinhood Chain, stacked by category](https://raw.githubusercontent.com/0xCadeZ/uni-burn-flow/main/charts/3_fee_by_day.png)
 
 Per sampled day, memecoin fees were 24% of the three-month total in August, 36% in September and 4% in October. Tokenized stocks went 1%, 19%, 4%. Crypto majors 1%, 8%, 4%. The Sep 4 sample day alone was 19% of all sampled fees; Oct 21 and Oct 28 were 2% each. Robinhood Chain's monthly revenue fell 80% from September to October, and total burn revenue fell 45%.
 
