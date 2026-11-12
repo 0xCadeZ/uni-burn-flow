@@ -1,0 +1,7 @@
+data/samples/
+data/mainnet/2026-*.json
+data/robinhood_v3_pools.json
+data/llama_*.json
+data/eth_daily_*.json
+data/rh_assets.json
+__pycache__/

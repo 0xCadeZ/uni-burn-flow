@@ -1,0 +1,494 @@
+{
+ "0x0bd7d308f8e1639fab988df18a8011f41eacad73": {
+  "symbol": "WETH",
+  "decimals": 18
+ },
+ "0x5fc5360d0400a0fd4f2af552add042d716f1d168": {
+  "symbol": "USDG",
+  "decimals": 6
+ },
+ "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea": {
+  "symbol": "SPCX",
+  "decimals": 18
+ },
+ "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec": {
+  "symbol": "NVDA",
+  "decimals": 18
+ },
+ "0x117cc2133c37b721f49de2a7a74833232b3b4c0c": {
+  "symbol": "SPY",
+  "decimals": 18
+ },
+ "0xec262a75e413fafd0df80480274532c79d42da09": {
+  "symbol": "MSTR",
+  "decimals": 18
+ },
+ "0x385f4f8ae47651ce5f58f5265395a669f8281e18": {
+  "symbol": "MEME",
+  "decimals": 18
+ },
+ "0x05a3d1cd21d0c88145e82600e62e7e496e0f222b": {
+  "symbol": "AMC",
+  "decimals": 18
+ },
+ "0x1b0e319c6a659f002271b69db8a7df2f911c153e": {
+  "symbol": "GME",
+  "decimals": 18
+ },
+ "0x020bfc650a365f8bb26819deaabf3e21291018b4": {
+  "symbol": "CASHCAT",
+  "decimals": 18
+ },
+ "0xb387fef846f8eb24f91bf5d9868344c90ea93c61": {
+  "symbol": "LEVCAT",
+  "decimals": 18
+ },
+ "0x232cdfc415d10b673845d83dc02ba2eabe7e30d1": {
+  "symbol": "IF",
+  "decimals": 18
+ },
+ "0x39dbed3a2bd333467115de45665cc57f813c4571": {
+  "symbol": "PONS",
+  "decimals": 18
+ },
+ "0xc6911796042b15d7fa4f6cde69e245ddcd3d9c31": {
+  "symbol": "VIRTUAL",
+  "decimals": 18
+ },
+ "0x51fb76be80ab6daaa345d818f4e06441816b4fea": {
+  "symbol": "NASDANQ",
+  "decimals": 18
+ },
+ "0x6245e67affa44a23077f0ea7f981a8dc743a0c47": {
+  "symbol": "FRONG",
+  "decimals": 18
+ },
+ "0x4a4f17c907f3fd1e458c0a9953b426269a232660": {
+  "symbol": "BROKECAT",
+  "decimals": 18
+ },
+ "0x4a6eec8a30b49d289b9fc865fd374b4d61eab8fb": {
+  "symbol": "Liluni",
+  "decimals": 18
+ },
+ "0x5cb6f181081301b44905f3ae15419112ecabd8a6": {
+  "symbol": "PIPEDOG",
+  "decimals": 18
+ },
+ "0x499bc7a72e6fe9deb6d8c3aacfadb10d4b7086b2": {
+  "symbol": "LEGATE",
+  "decimals": 18
+ },
+ "0xe15db7c8547a0add11eb26a700246cca08aefce5": {
+  "symbol": "WOOF",
+  "decimals": 18
+ },
+ "0x56910d4409f3a0c78c64dd8d0545ff0705389870": {
+  "symbol": "Index",
+  "decimals": 18
+ },
+ "0x705d5345003401cc714708decf716bdb492079e3": {
+  "symbol": "BEGCAT",
+  "decimals": 18
+ },
+ "0xd7321801caae694090694ff55a9323139f043b88": {
+  "symbol": "JUGGERNAUT",
+  "decimals": 18
+ },
+ "0xf0774ce8f56c15cd9274c13390a4d602a7ea32f6": {
+  "symbol": "MERRY",
+  "decimals": 18
+ },
+ "0x45242320dbb855eea8fd36804c6487e10e97fcf9": {
+  "symbol": "TENDIES",
+  "decimals": 18
+ },
+ "0x4b0000f02014aeedb5d9dd9609cd07fc14c4a569": {
+  "symbol": "HUNNY",
+  "decimals": 18
+ },
+ "0x4dcc67628d34137b8e56fb31f834340e60c7185d": {
+  "symbol": "MRDN",
+  "decimals": 18
+ },
+ "0xb382d6287fd60970f41e58311c74047c942fd75f": {
+  "symbol": "VIBE",
+  "decimals": 18
+ },
+ "0x1979d8f10b11a26a0c44d74a4adeb2185002e46a": {
+  "symbol": "arip",
+  "decimals": 18
+ },
+ "0xd7b8575fe303dec4dee252cbe22daf03f488cc66": {
+  "symbol": "HeavyBreathing",
+  "decimals": 18
+ },
+ "0x77e9dd188ece81baa982fba86cdd414698c170ae": {
+  "symbol": "RedBull",
+  "decimals": 18
+ },
+ "0x4f9fcebef7fe0eac455f2d585a6bb7145f515818": {
+  "symbol": "Minecraft",
+  "decimals": 18
+ },
+ "0xd24f92d903fef310805fbdd002545e40af494c74": {
+  "symbol": "UCORN",
+  "decimals": 18
+ },
+ "0xb2a1205470593745c9f39c7b43814a4e119c6b9a": {
+  "symbol": "WINK",
+  "decimals": 18
+ },
+ "0xa30fa36db767ad9ed3f7a60fc79526fb4d56d344": {
+  "symbol": "USO",
+  "decimals": 18
+ },
+ "0x476249a9f725d24ae5166fc26e696fe2affc267f": {
+  "symbol": "TRIPLET",
+  "decimals": 18
+ },
+ "0xe934e36a439c94017b64a3fece66af12099abf50": {
+  "symbol": "STONKBROKER",
+  "decimals": 18
+ },
+ "0x2701785c0e84195aeac0e94505905f4e3b908e08": {
+  "symbol": "website",
+  "decimals": 18
+ },
+ "0xd3f1e934693608b13d4f8dc016c648655e2da0f2": {
+  "symbol": "CASHLESSCAT",
+  "decimals": 18
+ },
+ "0xa80eb66b3e0cf66ccb46f8b8c9e7ff5803eeb820": {
+  "symbol": "WEN",
+  "decimals": 18
+ },
+ "0x07b7efbeeae3a03dc70253eaf3e408c6ed6162d2": {
+  "symbol": "YOLO",
+  "decimals": 18
+ },
+ "0x9520f8b31f2e058a1e82788d7f52b1de58d870a2": {
+  "symbol": "POW",
+  "decimals": 18
+ },
+ "0x3ca081b470954c8f0dfc5408df6449b93a0dc058": {
+  "symbol": "LMAO!",
+  "decimals": 18
+ },
+ "0x9a1d456a5ea88b6add40bfc57901da4c9d17cfb0": {
+  "symbol": "UP",
+  "decimals": 18
+ },
+ "0x17424ae6261452a5bfc7950073d88f452f2ced71": {
+  "symbol": "tecker",
+  "decimals": 18
+ },
+ "0x093c6a7db1fe3b0ee2ce932eab310b82dd4e0e59": {
+  "symbol": "OMOJI",
+  "decimals": 18
+ },
+ "0x62c71cd34a52c30d894419cbcc55db2afa8032ea": {
+  "symbol": "YOLO",
+  "decimals": 18
+ },
+ "0xc9891a1dd40b5bb34664af69784e15cc5bf3fdaf": {
+  "symbol": "arip",
+  "decimals": 18
+ },
+ "0x36cff688889e5192f17f867cf97b54ed71bd83d1": {
+  "symbol": "Mc",
+  "decimals": 18
+ },
+ "0xb38a6c792526773302056715bf5c6789fd27673f": {
+  "symbol": "BLOCK",
+  "decimals": 18
+ },
+ "0x32ac8c1d7672667d5ebdea22935f7b06fc8d496f": {
+  "symbol": "HOOD",
+  "decimals": 18
+ },
+ "0x834a24d16bf56d692c2e5fff9428f9d01f2f1ca5": {
+  "symbol": "LOXI",
+  "decimals": 18
+ },
+ "0x8f0131761d2f88887c9ed3004368f59de723901a": {
+  "symbol": "VEYR",
+  "decimals": 18
+ },
+ "0xc262dd6b70f1e74fc8b890726bcd1cb26c3a4e8b": {
+  "symbol": "Sisypuss",
+  "decimals": 18
+ },
+ "0x097fd0609b5bed0625def9afea01c509e7e25de3": {
+  "symbol": "TROY",
+  "decimals": 18
+ },
+ "0x875e61f709cd3d558ec62995f1685db9a5d3679b": {
+  "symbol": "ELE",
+  "decimals": 18
+ },
+ "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9": {
+  "symbol": "AAPL",
+  "decimals": 18
+ },
+ "0xfb1bcb6817f7b8fa86896d3253b16aeb7bd6a5a8": {
+  "symbol": "worth",
+  "decimals": 18
+ },
+ "0x793d5d68704f7684dee7547d1b583834b894939d": {
+  "symbol": "SON",
+  "decimals": 18
+ },
+ "0x62cc609da4d04d44bf0b4ce10767c4abb7a9417a": {
+  "symbol": "Minecraft",
+  "decimals": 18
+ },
+ "0x35a1dfb251b737574af73dc4b06fc63d3e12d9f4": {
+  "symbol": "HeavyBreathing",
+  "decimals": 18
+ },
+ "0xd82f70f530aff45b831d6ee17062b4e85395c6f3": {
+  "symbol": "ROBINDEX",
+  "decimals": 18
+ },
+ "0x74de36213705d4a561fa800e3647c50e3a0a7412": {
+  "symbol": "OMOJI",
+  "decimals": 18
+ },
+ "0x0f2a805dbda8d67456ff88c95ebacbf3cfe0518b": {
+  "symbol": "WALLETCAT",
+  "decimals": 18
+ },
+ "0x8ec17c059f250a5c19566c3fc56ee13a343dd283": {
+  "symbol": "MUMU",
+  "decimals": 18
+ },
+ "0xbc30b4f9cfef5a8023df100bd54165dc32717f14": {
+  "symbol": "dolan",
+  "decimals": 18
+ },
+ "0x941edee631a843dc9b108d2029766b4244740a85": {
+  "symbol": "Minecraft",
+  "decimals": 18
+ },
+ "0x191d75e99aab81ae4b2a394aab3e22d301b70e6d": {
+  "symbol": "Liluni",
+  "decimals": 18
+ },
+ "0x51447492d1f97f0ef450cad51b02424e1a5017a7": {
+  "symbol": "arip",
+  "decimals": 18
+ },
+ "0x259d200d2124b221f606ca6f01829dae2290ddd0": {
+  "symbol": "RedBull",
+  "decimals": 18
+ },
+ "0xb319afb34423910b2daf531722a788787c45752f": {
+  "symbol": "TURBO",
+  "decimals": 18
+ },
+ "0xd93654f60268efb93fa49f52dbc1aa49190839ac": {
+  "symbol": "MEOWSHI",
+  "decimals": 18
+ },
+ "0x4890fa044cd3678d6b4e404a45898e9eb32a2efd": {
+  "symbol": "RedBull",
+  "decimals": 18
+ },
+ "0xea3d61e4bb90e7da97af06deb8513c39973cdc7a": {
+  "symbol": "Lunar Wallet",
+  "decimals": 18
+ },
+ "0xedc62851ef24928d934024f69bb073a305090663": {
+  "symbol": "IMAGINE",
+  "decimals": 18
+ },
+ "0x27301e90357afbda5b108c8fc4ac41c39a60d399": {
+  "symbol": "Nole",
+  "decimals": 18
+ },
+ "0x69ba6c590f347d27ec7c0df446e6b360bc96b2f0": {
+  "symbol": "Minecraft",
+  "decimals": 18
+ },
+ "0x36fa6545933c23dd71e632d05a65f42f2b365c06": {
+  "symbol": "VAUTH",
+  "decimals": 18
+ },
+ "0x322f0929c4625ed5bad873c95208d54e1c003b2d": {
+  "symbol": "TSLA",
+  "decimals": 18
+ },
+ "0x77581054581b9c525e7dd7a0155de43867532d03": {
+  "symbol": "WISHBONE",
+  "decimals": 18
+ },
+ "0x8d4dfaaa4198b6486e0293fec914c2b6a821d4dc": {
+  "symbol": "KITSU",
+  "decimals": 18
+ },
+ "0x808a9d5071e7d5f58490cb7385027536bbe43ef0": {
+  "symbol": "TURBO",
+  "decimals": 18
+ },
+ "0xd38e8c5c5c5e48173a6c8441bca96fc6cc1420a4": {
+  "symbol": "FomoCoin",
+  "decimals": 18
+ },
+ "0xc917675fc5920e5c9740ccdbb64f73e9dc316ff0": {
+  "symbol": "HeavyBreathing",
+  "decimals": 18
+ },
+ "0xdf516706bc69c5f42707c6764d89372c21fd73e9": {
+  "symbol": "RedBull",
+  "decimals": 18
+ },
+ "0x755a06d5e9f9a304f60ce0685407788721a91df4": {
+  "symbol": "Minecraft",
+  "decimals": 18
+ },
+ "0x5092fdae20b99bc02327ddd91b90ed7972d42910": {
+  "symbol": "Carlson",
+  "decimals": 18
+ },
+ "0x99aab180608c8814d229d5e2e9e9c45d4b8bf879": {
+  "symbol": "Minecraft",
+  "decimals": 18
+ },
+ "0xe07b0b128d26ac516105a062006a5ee6c2d47d7e": {
+  "symbol": "NANO",
+  "decimals": 18
+ },
+ "0x7e903c59908096e66d3ff0a39dbff06b456836dc": {
+  "symbol": "FRONG",
+  "decimals": 18
+ },
+ "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681": {
+  "symbol": "INTC",
+  "decimals": 18
+ },
+ "0x430943428a4dea934ed6387a0637a502b556fc79": {
+  "symbol": "VANTA",
+  "decimals": 18
+ },
+ "0x0c25aa36986e0ae904d0233695e828d08a065fe2": {
+  "symbol": "FP",
+  "decimals": 18
+ },
+ "0x2103faa9d1762e27a716c61718b3acf3ec1f9bf1": {
+  "symbol": "FOX",
+  "decimals": 18
+ },
+ "0x524dc2779bf3a9b39a889eb46ea2893cf1373aab": {
+  "symbol": "Chiikawa",
+  "decimals": 18
+ },
+ "0xf3d4b54a4031a48c5fc94dee92c11faffcc1c354": {
+  "symbol": "OMOJI",
+  "decimals": 18
+ },
+ "0xf84950b3eacb8b09236312035bc4d750d1657afd": {
+  "symbol": "Pandu",
+  "decimals": 18
+ },
+ "0x30aa624ef9cbeb25e2c5680796f71bc1b07b8bd1": {
+  "symbol": "FRONG",
+  "decimals": 18
+ },
+ "0x0aa5172abe3270d0bf6afe2f78cf1b4036f57213": {
+  "symbol": "POOLS",
+  "decimals": 18
+ },
+ "0x622873fefb874fb2448e41f3acd3eec49bf52652": {
+  "symbol": "TROY",
+  "decimals": 18
+ },
+ "0x03c4920ad63d70e99328e5e26da38ca696be1caa": {
+  "symbol": "Liluni",
+  "decimals": 18
+ },
+ "0x9c2ab18445f44d6fb96dc3c6f4f2ae9e67828bf3": {
+  "symbol": "Cupsey",
+  "decimals": 18
+ },
+ "0x2355431b83b1a8e40172d099d90243d8d666b56b": {
+  "symbol": "VIBE CAT",
+  "decimals": 18
+ },
+ "0x2be96d9f1d22eb6337557a25df215a6e6227938a": {
+  "symbol": "TUZKI",
+  "decimals": 18
+ },
+ "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18": {
+  "symbol": "AI",
+  "decimals": 18
+ },
+ "0x8750da3e48345ec0c5aaaacfcda2a004da3b60c2": {
+  "symbol": "UNIFROG",
+  "decimals": 18
+ },
+ "0xc1a0c3929f5e12b5cfd6ae36f197a45bedf79417": {
+  "symbol": "SESTRI",
+  "decimals": 18
+ },
+ "0x2076cd26d8cf26f91655d4ada3dd2fdbfdd8e7a4": {
+  "symbol": "APES",
+  "decimals": 18
+ },
+ "0xec525964df6ba80aa1968a6529f2823c35978d77": {
+  "symbol": "HILL",
+  "decimals": 18
+ },
+ "0xc067b317d2a24c4b288db41d5acc8176aa3f2574": {
+  "symbol": "ANON",
+  "decimals": 18
+ },
+ "0x0762c1708f0d23f86b29d6b857121ff7df357506": {
+  "symbol": "website",
+  "decimals": 18
+ },
+ "0x3ae35f81c93348777f27a730a2721061a8377d52": {
+  "symbol": "IMAGINE",
+  "decimals": 18
+ },
+ "0x0339f5459fc690ac85f1782e15782a151b4a9e1b": {
+  "symbol": "WALLET",
+  "decimals": 18
+ },
+ "0xf43c172984ff15664aaf3eb911a436e685536eb3": {
+  "symbol": "VERD",
+  "decimals": 18
+ },
+ "0x9470abcee5fdd4898147f9501c5f1535c8f7c385": {
+  "symbol": "TROY",
+  "decimals": 18
+ },
+ "0x7bb6dae0736802509b4788f083a423e24f1d09c5": {
+  "symbol": "CARLSON2028",
+  "decimals": 18
+ },
+ "0x67a01f22ab409f27afeac3a8eeb0e4ac41d213c8": {
+  "symbol": "UNIHOOD",
+  "decimals": 18
+ },
+ "0x018493d3439a538ed7985eb14084414db58c9576": {
+  "symbol": "WORTHLESS",
+  "decimals": 18
+ },
+ "0x8a7eec6a74f7423f95e3a796661d83f5beb358b4": {
+  "symbol": "ACTUAL OG",
+  "decimals": 18
+ },
+ "0xec9997fe097b75272cfc0114aa60fbac1f4e4660": {
+  "symbol": "BRACKETS",
+  "decimals": 18
+ },
+ "0x3cb612eb48eeb9af24c65ed4d05b7471de17e2bb": {
+  "symbol": "PRETT",
+  "decimals": 18
+ },
+ "0x1a737f880d34af99cc04bc8a8a7d2c06a6bffa48": {
+  "symbol": "ELE",
+  "decimals": 18
+ }
+}
